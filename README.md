@@ -39,11 +39,11 @@ Only Model has a Accuracy of 91.08% , below is the screenshot showing accuracy w
 
 A Custom Coded Model (Logistic Regression) was used for the classification prediction with the below parameters where tuned for best accuracy : 
 
-   a) C controls the regularisation level in the ML model. The sample space is uniform distribution between 0.1 and 1 
-   b) max iter controls then number of maximum iterations. The sample space is random value from a list of 50 and 100 
-   c) logistic regression 
-   d) random parameter sampling is chosen to find the best hyperparameter values 
-   e) early stopping policy is chosen 
+####  a) C controls the regularisation level in the ML model. The sample space is uniform distribution between 0.1 and 1 
+####  b) max iter controls then number of maximum iterations. The sample space is random value from a list of 50 and 100 
+####  c) logistic regression 
+####  d) random parameter sampling is chosen to find the best hyperparameter values 
+####  e) early stopping policy is chosen 
 
 Hyperparameter tuning : 
 
@@ -72,7 +72,7 @@ data everything will be automated in the Auto ML. In my case , the best model wa
 
 ![image](https://user-images.githubusercontent.com/92014201/146748539-7560c797-48c3-45a0-8258-d7d0f9396735.png)
 
-##### a) experiment_timeout_minutes=15
+##### a) experiment_timeout_minutes=30
 This parameter is used to define in minutes, how long the experiment will run. The experiment will be stopped in this case after 15 minutes
 
 ##### b) task=classification
@@ -90,7 +90,7 @@ This parameter defines the traning data
 #### f) label_column_name=y
 This parameter defines the groud truth column
 
-#### g) n_cross_validations=2
+#### g) n_cross_validations=3
 This parameter defines the number of cross validation performed during training process.
 
 
@@ -104,10 +104,11 @@ tuning , we had to set the configurations in  Hyperdrive but for the AutoMl ever
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
+Due to the given time constraints and cluster constraints , we could not do the iterate the model further  we could tune the logistics model with more parameters to see , if we get a better accuracy than what we have now. 
+
 Getting to know more about features and how it is caluculated would be very usefull for the Model Interpretation and business.Sometimes using a Automl and 
 Optimizing the function to have the best fit can have lot of Mathematical transformations of the variabels but may not be useful for the business. 
 Hence need more visibility of the calcualtion of features might improve the performance of the model
-
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
