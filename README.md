@@ -72,25 +72,25 @@ data everything will be automated in the Auto ML. In my case , the best model wa
 
 ![image](https://user-images.githubusercontent.com/92014201/146748539-7560c797-48c3-45a0-8258-d7d0f9396735.png)
 
-###### experiment_timeout_minutes=15
+##### experiment_timeout_minutes=15
 This parameter is used to define in minutes, how long the experiment will run. The experiment will be stopped in this case after 15 minutes
 
-###### task=classification
+##### task=classification
 This parameter defines the task involved. In this case we are doing classification. Hence, classification is set as a value
 
-##### primary_metric=accuracy
+#### primary_metric=accuracy
 This parameter sets the peformance metrics chosen. In this case accuracy is used.
 
-##### compute_target
+#### compute_target
 This parameter defines the compute cluster used for the training process
 
-##### training_data
+#### training_data
 This parameter defines the traning data
 
-##### label_column_name=y
+#### label_column_name=y
 This parameter defines the groud truth column
 
-##### n_cross_validations=2
+#### n_cross_validations=2
 This parameter defines the number of cross validation performed during training process.
 
 
