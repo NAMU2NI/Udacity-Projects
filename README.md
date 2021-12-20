@@ -6,28 +6,63 @@ Optmizing ML Pipeline in Azure
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
 In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
-This model is then compared to an Azure AutoML run.
+This model is then compared to an Azure AutoML run. 
+
+As shown in the below flow , Logistic regression model was given as a custom coded model , in this project I will exploring the AzureML in Python SDK of Hyperparameter tuning and Automl to check which has the better accuracy and share more details of how to do the same.   
+
+![image](https://user-images.githubusercontent.com/92014201/146714044-bf997ced-149d-4a1b-a706-8cd8c0dcf72c.png)
+
 
 ## Summary
 The data is related with direct marketing campaigns of a bank , there were 16 columns which describes more about the client and the Target column was whether a client
 will subscribe a term deposit or not (variable y). This is a classification problem. 
 
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model from the Auto Ml which had a Accuracy of 0.91741 using XG Boost Classifier  "**
+**In 1-2 sentences, explain the solution: e.g. "The best performing model from the Auto Ml which had a Accuracy of 91.7% using XG Boost Classifier and with Hyper patameter tuning the best accuracy was 91.0% " , clearly AUTOML is the champion model here.
 
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 
-A Custom Coded Model (Logistic Regression) was used and it was further optimized by Hyperdrive functions in Azure ML.H yperparameter tuning is a process where 
-automatically adjusting process to take control of the training process. All the trial and error methods are automated to bring out the best fit using the 
-Hyperparameter tuning.   
+#### Data Load : 
+
+Bank Marketing Dataset was loaded as URL and it later converted into the Datastore as explained earlier it had 21 columns with a Target columns as y and has 32950 rows.  
+Once the data was loaded all the categorical columns was passed into the  one hot encoding and converted into binary columns and label encoding was done for columns related to time. The Model was also split into Training and Testing model with 77 % of the data goes into Training and 33% goes into Testing the model.   
+
+#### Model Training : 
+
+##### Only Logistic Model 
+
+Only Model has a Accuracy of 91.08% , below is the screenshot showing accuracy with the arguments of C: 1 and Max Iter : 100
+
+![image](https://user-images.githubusercontent.com/92014201/146743490-aa6b8093-5271-49cf-9774-9c0f612b8aac.png)
+
+Model showing only the accuracy : 
+
+![image](https://user-images.githubusercontent.com/92014201/146740531-e9476b40-e326-4d23-91b9-fb3746b98051.png)
+
+A Custom Coded Model (Logistic Regression) was used for the classification prediction with the below parameters where tuned for best accuracy : 
+
+   a) C controls the regularisation level in the ML model. The sample space is uniform distribution between 0.1 and 1 
+   b) max iter controls then number of maximum iterations. The sample space is random value from a list of 50 and 100 
+   c) logistic regression 
+   d) random parameter sampling is chosen to find the best hyperparameter values 
+   e) early stopping policy is chosen 
+
+Hyperparameter tuning : 
+
+Parameters choosen for Hyperparameter tuning :     
+
+![image](https://user-images.githubusercontent.com/92014201/146743319-e8ce5992-5ffd-4093-8edb-e71cdbd305c9.png)
+
+Hyperparameters showing Accuracy : 
+
+![image](https://user-images.githubusercontent.com/92014201/146743120-155c09cc-d7f1-40e6-b1c1-9443ce86efcf.png)
 
 
 **What are the benefits of the parameter sampler you chose?**
 
-In my run , i have used Random Parameter Sampling which randomly selects the data for 
-finding the best fit for training the data.
+RandomParameterSampling is fast and support early termination. If budget is not an issue, we can use GridParameterSampling for an exhaustive solution. The accuracy of the model may be better than values that are found by RandomParameterSampling. Additionally, BayesianParameterSampling is another option that we can utilise.
 
 **What are the benefits of the early stopping policy you chose?**
 
