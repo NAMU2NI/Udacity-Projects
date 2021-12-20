@@ -35,10 +35,6 @@ Once the data was loaded all the categorical columns was passed into the  one ho
 
 Only Model has a Accuracy of 91.08% , below is the screenshot showing accuracy with the arguments of C: 1 and Max Iter : 100
 
-![image](https://user-images.githubusercontent.com/92014201/146743490-aa6b8093-5271-49cf-9774-9c0f612b8aac.png)
-
-Model showing only the accuracy : 
-
 ![image](https://user-images.githubusercontent.com/92014201/146740531-e9476b40-e326-4d23-91b9-fb3746b98051.png)
 
 A Custom Coded Model (Logistic Regression) was used for the classification prediction with the below parameters where tuned for best accuracy : 
@@ -57,8 +53,7 @@ Parameters choosen for Hyperparameter tuning :
 
 Hyperparameters showing Accuracy : 
 
-![image](https://user-images.githubusercontent.com/92014201/146743120-155c09cc-d7f1-40e6-b1c1-9443ce86efcf.png)
-
+![image](https://user-images.githubusercontent.com/92014201/146743120-155c09cc-d7f1-40e6-b1c1-9443ce86efcf.png) 
 
 **What are the benefits of the parameter sampler you chose?**
 
@@ -74,6 +69,29 @@ and this helps in using the resources optimaly and also saves time.
 
 AutoML Config is away of leveraging the SDK to automate the Machine learning , from the doing feature engineering to the selecting the best algorithm for the 
 data everything will be automated in the Auto ML. In my case , the best model was XG Boost Classifier with a Accuracy of 0.9174.
+
+![image](https://user-images.githubusercontent.com/92014201/146748539-7560c797-48c3-45a0-8258-d7d0f9396735.png)
+
+###### experiment_timeout_minutes=15
+This parameter is used to define in minutes, how long the experiment will run. The experiment will be stopped in this case after 15 minutes
+
+###### task=classification
+This parameter defines the task involved. In this case we are doing classification. Hence, classification is set as a value
+
+##### primary_metric=accuracy
+This parameter sets the peformance metrics chosen. In this case accuracy is used.
+
+##### compute_target
+This parameter defines the compute cluster used for the training process
+
+##### training_data
+This parameter defines the traning data
+
+##### label_column_name=y
+This parameter defines the groud truth column
+
+##### n_cross_validations=2
+This parameter defines the number of cross validation performed during training process.
 
 
 ## Pipeline comparison
