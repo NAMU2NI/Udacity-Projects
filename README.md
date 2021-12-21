@@ -118,8 +118,12 @@ This parameter defines the number of cross validation performed during training 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
-Using Logistics regression and the HyperParameter tuning the best model accuracy was 0.91 but from AutoML the best accuracy was 0.92. In terms of Hyperparameter 
+Using Logistics regression and the HyperParameter tuning the best model accuracy was 91.08% but from AutoML the best accuracy was 91.66%. In terms of Hyperparameter 
 tuning , we had to set the configurations in  Hyperdrive but for the AutoMl everything was automatically created by the Model. 
+
+![image](https://user-images.githubusercontent.com/92014201/146880482-0e9c06da-b73d-4149-b96c-14cd71fca9e5.png)
+
+AutoML Model was an ensemble model which means multiple diverse models are created to predict an outcome, whereas in the Hyper Parameter tuning only one model logistic regression is been trained and optimized to bring out the best accuracy. Hence we see very sligh improvement in the accuracy of the Auto Ml and Hyperparameter tuning model. 
  
 
 ## Future work
