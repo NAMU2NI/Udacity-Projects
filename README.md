@@ -138,7 +138,5 @@ Hence need more visibility of the calcualtion of features might improve the perf
 
   3) Model should not be focused only on improving the Overall Accuracy , in this problem False Positives are where the Customers are not going to buy the FD but the model recommends them as positives and False Negatives are where Model predicts the customers not going to buy the FD , but in actual they would be buying it. So considering the business case Model should be focused on reducing the False Negatives , hence the Primary metric should be Recall and not only overall Accuracy. 
 
-## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+
 
