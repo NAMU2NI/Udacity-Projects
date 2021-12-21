@@ -53,7 +53,11 @@ Parameters choosen for Hyperparameter tuning :
 
 Hyperparameters showing Accuracy : 
 
-![image](https://user-images.githubusercontent.com/92014201/146743120-155c09cc-d7f1-40e6-b1c1-9443ce86efcf.png) 
+![image](https://user-images.githubusercontent.com/92014201/146743120-155c09cc-d7f1-40e6-b1c1-9443ce86efcf.png)  
+
+Best Model in Hyper parameter tuning with C : 0.557 and Max Iter: 150 
+![image](https://user-images.githubusercontent.com/92014201/146878856-84221f88-f764-46e0-8a76-6ce7ddeca5f4.png)
+
 
 **What are the benefits of the parameter sampler you chose?**
 
