@@ -93,7 +93,23 @@ This parameter defines the groud truth column
 #### g) n_cross_validations=3
 This parameter defines the number of cross validation performed during training process.
 
+### Screenshot showing the different Iterations tried by the Auto ML Model 
 
+![image](https://user-images.githubusercontent.com/92014201/146871300-49705838-5a7c-420b-b4e4-fc05344dcbb6.png)
+
+### Best Model parameters from the Auto ML model 
+
+"param_kwargs": {
+        "booster": "gbtree",
+        "colsample_bytree": 1,
+        "eta": 0.3,
+        "gamma": 0,
+        "max_depth": 10,
+        "max_leaves": 511,
+        "n_estimators": 10,
+        "objective": 
+        
+        
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
