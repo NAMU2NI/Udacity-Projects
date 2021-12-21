@@ -124,11 +124,14 @@ tuning , we had to set the configurations in  Hyperdrive but for the AutoMl ever
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
-Due to the given time constraints and cluster constraints , we could not do the iterate the model further  we could tune the logistics model with more parameters to see , if we get a better accuracy than what we have now. 
 
-Getting to know more about features and how it is caluculated would be very usefull for the Model Interpretation and business.Sometimes using a Automl and 
+        1) Only Logistic model without any hyper parameter tuning had an accuracy of 91.08% and Hyper Parameter tuning model also has the same accuracy which means that there are more scope to improve the accuracy. Due to the given time constraints and cluster constraints , we could not do the iterate the model further  we could tune the logistics model with more parameters to see , if we get a better accuracy than what we have now. 
+
+        2) Getting to know more about features and how it is caluculated would be very usefull for the Model Interpretation and business. Sometimes using a Automl and 
 Optimizing the function to have the best fit can have lot of Mathematical transformations of the variabels but may not be useful for the business. 
-Hence need more visibility of the calcualtion of features might improve the performance of the model
+Hence need more visibility of the calcualtion of features might improve the performance of the model. 
+
+        3) Model should not be focused only on improving the Overall Accuracy , in this problem False Positives are where the Customers are not going to buy the FD but the model recommends them as positives and False Negatives are where Model predicts the customers not going to buy the FD , but in actual they would be buying it. So considering the business case Model should be focused on reducing the False Negatives , hence the Primary metric should be Recall and not only overall Accuracy. 
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
