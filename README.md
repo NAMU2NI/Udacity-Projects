@@ -18,7 +18,7 @@ The data is related with direct marketing campaigns of a bank , there were 16 co
 will subscribe a term deposit or not (variable y). This is a classification problem. 
 
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model from the Auto Ml which had a Accuracy of 91.7% using XG Boost Classifier and with Hyper patameter tuning the best accuracy was 91.0% " , clearly AUTOML is the champion model here.
+**In 1-2 sentences, explain the solution: e.g. "The best performing model from the Auto Ml which had a Accuracy of 91.66% using XG Boost Classifier and with Hyper patameter tuning the best accuracy was 91.08% " , clearly AUTOML is the champion model here.
 
 
 ## Scikit-learn Pipeline
